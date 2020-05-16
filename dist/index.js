@@ -30,6 +30,7 @@ const createNewBlock = (data) => {
     const newTimeStamp = getNewTimeStamp();
     const nextHash = Block.calculateBlockHash(newIndex, previousBlock.hash, newTimeStamp, data);
     const newBlock = new Block(newIndex, nextHash, previousBlock.hash, data, newTimeStamp);
+    addBlock(newBlock);
     return newBlock;
 };
 const getHashforBlock = (aBlock) => Block.calculateBlockHash(aBlock.index, aBlock.previousHash, aBlock.timestamp, aBlock.data);
@@ -55,5 +56,8 @@ const addBlock = (candidateBlock) => {
         blockchain.push(candidateBlock);
     }
 };
+createNewBlock("deokSecond");
+createNewBlock("deokSed");
+createNewBlock("deokSecod");
 console.log(blockchain);
 //# sourceMappingURL=index.js.map

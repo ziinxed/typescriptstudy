@@ -64,6 +64,7 @@ const createNewBlock = (data: string): Block => {
     data,
     newTimeStamp
   );
+  addBlock(newBlock);
   return newBlock;
 };
 
@@ -93,6 +94,10 @@ const addBlock = (candidateBlock: Block): void => {
     blockchain.push(candidateBlock);
   }
 };
+
+createNewBlock("deokSecond");
+createNewBlock("deokSed");
+createNewBlock("deokSecod");
 
 console.log(blockchain);
 
