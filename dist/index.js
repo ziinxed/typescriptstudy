@@ -1,7 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const sayHi = (name, age, gender) => {
-    return `hello ${name}, you are ${age}, you are a ${gender}!`; // $ 표시를 통해 스트링에 변수 삽입
+const person = {
+    name: "deok",
+    age: 22,
+    gender: "male"
 };
-sayHi("whaing", 24, `male`);
+const sayHi = (person) => {
+    return `hello ${person.name}, you are ${person.age}, you are a ${person.gender}`; // $ 표시를 통해 스트링에 변수 삽입
+};
+console.log(sayHi(person));
 //# sourceMappingURL=index.js.map
